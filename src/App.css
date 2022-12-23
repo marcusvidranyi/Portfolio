@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+/* scroll to top button */
+.top_btn_position {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+}
+.top_btn_styles {
+  height: 40px;
+  width: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+}
+.top_btn_styles:hover {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid black;
+}

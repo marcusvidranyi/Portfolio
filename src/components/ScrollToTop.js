@@ -7,7 +7,8 @@ const ScrollToTop = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 300) {
+            const scrolled = document.documentElement.scrollTop;
+            if (scrolled > 300) {
                 setShowScrollTopButton(true);
             } else {
                 setShowScrollTopButton(false);
@@ -25,7 +26,7 @@ const ScrollToTop = () => {
 
     return (
         <div>
-            {showScrollTopButton && <FaAngleDoubleUp className="top_btn_position top_btn_styles" onClick={scrollTop} />}
+            {/* showScrollTopButton &&  */<FaAngleDoubleUp className="top_btn_position top_btn_styles" onClick={scrollTop} />}
         </div>
     );
 };

@@ -85,7 +85,7 @@ function App() {
            
            <div className="about_me_body">
                <p>I'm a web developer and designer based out of Budapest, Hungary. I love building apps that solve real-world problems, and that are delightful to use. My specialities include Javascript, React JS, Tailwind CSS, and Styled Components.</p>
-               <p>My background is in teaching and marketing, and I have a bachelors degree in English from Kings College. I also have five adorable cats.</p>
+               <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
            </div>
            
            <img src="https://picsum.photos/200/300" alt="Jane leaning against a bus" className="about_me_img" />

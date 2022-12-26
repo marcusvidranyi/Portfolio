@@ -1,6 +1,7 @@
 
 import { useState, useRef } from "react";
 import ScrollToTop from './components/ScrollToTop';
+import finalmyphoto from "./img/finalmyphoto.png";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
   const navToggle = () => {
     active === "nav_menu" ? setActive("nav_menu nav_active") : setActive("nav_menu");
 
-    /* TogglerIcon */
+  /* TogglerIcon */
 
     toggleIcon === "nav_toggler" ? setToggleIcon("nav_toggler toggle") : setToggleIcon("nav_toggler");
   };
@@ -35,10 +36,18 @@ function App() {
       <nav className="nav">
         <a href="email" className="marcus_email">marcusvidranyi@gmail.com</a>
         <ul className={active}>
-          <li onClick={() => scrollToSection(home)} className="nav_item"><a href="#home" className="nav_link">Home</a></li>
-          <li onClick={() => scrollToSection(services)} className="nav_item"><a href="#services" className="nav_link">My Services</a></li>
-          <li onClick={() => scrollToSection(aboutMe)} className="nav_item"><a href="#aboutme" className="nav_link">About me</a></li>
-          <li onClick={() => scrollToSection(myProjects)} className="nav_item"><a href="#myprojects" className="nav_link">My Projects</a></li>
+          <li onClick={() => scrollToSection(home)} className="nav_item">
+            <a href="#home" className="nav_link">Home</a>
+          </li>
+          <li onClick={() => scrollToSection(services)} className="nav_item">
+            <a href="#services" className="nav_link">My Services</a>
+          </li>
+          <li onClick={() => scrollToSection(aboutMe)} className="nav_item">
+            <a href="#aboutme" className="nav_link">About me</a>
+          </li>
+          <li onClick={() => scrollToSection(myProjects)} className="nav_item">
+            <a href="#myprojects" className="nav_link">My Projects</a>
+          </li>
         </ul>
         <div onClick={navToggle} className={toggleIcon}>
           <div className="line1"></div>
@@ -54,7 +63,7 @@ function App() {
             Hi, I am <strong>Marcus Vidrányi</strong>
           </h1>
           <p className="section_subtitle section_subtitle_intro">Front-End Developer</p>
-          <img src="https://picsum.photos/200/300" alt="my picture" className="intro_img"></img>
+          <img src={finalmyphoto} alt="my picture" className="intro_img"></img>
         </section>
 
         {/* Services */}
@@ -77,18 +86,18 @@ function App() {
 
 
 
-      
+
 
         <section ref={aboutMe} className='about_me'>
-        <h2 className="section_title section_title_about">Who I am</h2>
-           <p className="section_subtitle section_subtitle_about">Front-End Developer from Budapest</p>
-           
-           <div className="about_me_body">
-               <p>I'm a web developer and designer based out of Budapest, Hungary. I love building apps that solve real-world problems, and that are delightful to use. My specialities include Javascript, React JS, Tailwind CSS, and Styled Components.</p>
-               <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-           </div>
-           
-           <img src="https://picsum.photos/200/300" alt="Jane leaning against a bus" className="about_me_img" />
+          <h2 className="section_title section_title_about">Who I am</h2>
+          <p className="section_subtitle section_subtitle_about">Front-End Developer from Budapest</p>
+
+          <div className="about_me_body">
+            <p>I'm a web developer and designer based out of Budapest, Hungary. I love building apps that solve real-world problems, and that are delightful to use. My specialities include Javascript, React JS, Tailwind CSS, and Styled Components.</p>
+            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+          </div>
+
+          <img src="https://picsum.photos/200/300" alt="Jane leaning against a bus" className="about_me_img" />
         </section>
 
         <div ref={myProjects} className='my_projects_section'>

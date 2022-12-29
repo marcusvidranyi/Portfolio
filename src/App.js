@@ -2,6 +2,10 @@
 import { useState, useRef } from "react";
 import ScrollToTop from './components/ScrollToTop';
 import finalmyphoto from "./img/finalmyphoto.png";
+import EventHorizon from "./img/EventHorizon.jpg";
+import edesM from "./img/edesM.jpg";
+import CatchUp from "./img/CatchUp.jpg";
+import gitHub from "./img/github_icon_2.png"
 
 
 function App() {
@@ -25,7 +29,7 @@ function App() {
   const navToggle = () => {
     active === "nav_menu" ? setActive("nav_menu nav_active") : setActive("nav_menu");
 
-  /* TogglerIcon */
+    /* TogglerIcon */
 
     toggleIcon === "nav_toggler" ? setToggleIcon("nav_toggler toggle") : setToggleIcon("nav_toggler");
   };
@@ -100,9 +104,39 @@ function App() {
           <img src="https://picsum.photos/200/300" alt="Jane leaning against a bus" className="about_me_img" />
         </section>
 
-        <div ref={myProjects} className='my_projects_section'>
-          <h3>My Projects</h3>
-        </div>
+        <section ref={myProjects} className='my_projects_section'>
+          <h2 className="section_title section_title_work">My Projects</h2>
+          <p className="section_subtitle section_subtitle_work">A selection of my range of work</p>
+
+          <div className="portfolio">
+
+            <a href="https://team2project-97c57.web.app/main" className="portfolio_item">
+              <img src={EventHorizon} alt="" className="portfolio_img" />
+            </a>
+
+
+            <a href="https://edesm.com" className="portfolio_item">
+              <img src={edesM} alt="" className="portfolio_img" />
+            </a>
+
+            <a href="https://catch-up-fd42f.web.app/" className="portfolio_item">
+              <img src={CatchUp} alt="" className="portfolio_img" style={{ objectFit: "cover" }} />
+            </a>
+
+
+          </div>
+        </section>
+        <footer className="footer">
+
+          <a href="mailto:marcusvidranyi@gmail.com" className="footer__link">marcusvidranyi@gmail.com</a>
+          <ul className="social-list">
+            <li className="social-list__item">
+              <a className="social-list__link" href="https://github.com/marcusvidranyi">
+              <img src={gitHub} className="footer_logo" alt="github"/>
+              </a>
+            </li>
+          </ul>
+        </footer>
 
       </main>
     </div>

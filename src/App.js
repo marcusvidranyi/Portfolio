@@ -2,10 +2,12 @@
 import { useState, useRef } from "react";
 import ScrollToTop from './components/ScrollToTop';
 import finalmyphoto from "./img/finalmyphoto.png";
+import portfolio_second_picture from "./img/portfolio_second_picture.jpg";
 import EventHorizon from "./img/EventHorizon.jpg";
 import edesM from "./img/edesM.jpg";
 import CatchUp from "./img/CatchUp.jpg";
-import gitHub from "./img/github_icon_2.png"
+import gitHub from "./img/github_icon_2.png";
+
 
 
 function App() {
@@ -33,12 +35,12 @@ function App() {
 
     toggleIcon === "nav_toggler" ? setToggleIcon("nav_toggler toggle") : setToggleIcon("nav_toggler");
   };
-
+  
   return (
     <div className="App">
       <ScrollToTop />
       <nav className="nav">
-        <a href="email" className="marcus_email">marcusvidranyi@gmail.com</a>
+      <a href="mailto:marcusvidranyi@gmail.com" className="marcus_email">marcusvidranyi@gmail.com</a>
         <ul className={active}>
           <li onClick={() => scrollToSection(home)} className="nav_item">
             <a href="#home" className="nav_link">Home</a>
@@ -85,7 +87,7 @@ function App() {
             </div>
           </div>
 
-          <a href="#myprojects" className="btn">My Projects</a>
+          <div className="btn" onClick={() => scrollToSection(myProjects)}>My Projects</div>
         </div>
 
 
@@ -101,7 +103,7 @@ function App() {
             <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
           </div>
 
-          <img src="https://picsum.photos/200/300" alt="Jane leaning against a bus" className="about_me_img" />
+          <img src={portfolio_second_picture} alt="Jane leaning against a bus" className="about_me_img" />
         </section>
 
         <section ref={myProjects} className='my_projects_section'>

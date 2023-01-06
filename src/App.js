@@ -10,6 +10,7 @@ import gitHub from "./img/github_icon_2.png";
 
 
 
+
 function App() {
 
   const home = useRef(null);
@@ -27,6 +28,8 @@ function App() {
 
   const [active, setActive] = useState("nav_menu");
   const [toggleIcon, setToggleIcon] = useState("nav_toggler");
+
+   
 
   const navToggle = () => {
     active === "nav_menu" ? setActive("nav_menu nav_active") : setActive("nav_menu");

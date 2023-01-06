@@ -140,9 +140,33 @@ a {
   display: none;
 }
 
+/* Nav menu animation: */
+
 .nav_link {
   font-size: larger;
+  display: inline-block;
+  position: relative;
 }
+
+.nav_link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* --- */
 
 .section_title {
   margin-bottom: .25em;
@@ -180,7 +204,7 @@ a {
 /* Intro section */
 
 .intro {
-
+  padding-top: 20px;
   position: relative;
 }
 
@@ -195,6 +219,7 @@ a {
 
 @media (min-width: 768px) {
   .intro {
+    padding-top: 90px;
     display: grid;
     width: min-content;
     margin: 0 auto;
@@ -340,6 +365,7 @@ a {
 .portfolio_item {
   background: var(--color-accent);
   overflow: hidden;
+  
 
 }
 
@@ -349,6 +375,7 @@ a {
     opacity 250ms linear;
   object-fit: cover;
   height: 100%;
+  
 }
 
 .portfolio_item:focus {
@@ -359,6 +386,30 @@ a {
 .portfolio_img:hover,
 .portfolio_item:focus .portfolio_img {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.portfolio_img {
+  transform: none !important;
+  height: auto !important;
+  
+}
+
 }
 
 .about_me_section {
@@ -473,22 +524,16 @@ a {
 /* scroll to top button */
 .top_btn_position {
   position: fixed;
-  bottom: 3em;
-  right: 5px;
+  bottom: 5%;
+  right: 0%;
+  z-index: 3;
+  
 }
 
 .top_btn_styles {
-  height: 40px;
-  width: 40px;
-  border: 2px solid black;
-  border-radius: 50%;
-  color: #333;
-  background-color: #fff;
+  height: 70px;
+  width: 50px;
   cursor: pointer;
+  
 }
 
-.top_btn_styles:hover {
-  background-color: #333;
-  color: #fff;
-  border: 2px solid black;
-}

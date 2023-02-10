@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import ScrollToTop from './components/ScrollToTop';
 import finalmyphoto from "./img/finalmyphoto.png";
-import portfolio_second_picture from "./img/portfolio_second_picture.jpg";
+import portfolio_picture from "./img/profilepicture01.jpeg";
 import EventHorizon from "./img/EventHorizon.jpg";
 import edesM from "./img/edesM.jpg";
 import CatchUp from "./img/CatchUp.jpg";
@@ -82,11 +82,11 @@ function App() {
           <div className="services">
             <div className="service">
               <h3>Design</h3>
-              <p>I strive to create beautiful and intuitive web apps, meaning I design with both aestetics and usability in mind. You will get your designs delivered as Figma files, as websites or both.</p>
+              <p>I strive to create beautiful and intuitive web apps, meaning I design with both aestetics and usability in mind. I can bring your vision to life with a custom website that perfectly fits your needs.</p>
             </div>
             <div className="service">
               <h3>Development</h3>
-              <p>I am a versatile frontend developer with a speciality in React JS and Tailwind CSS. I also have a solid grip of the fundamentals of web development using HTML, CSS, and JavaScript.</p>
+              <p>I am a versatile frontend developer with a speciality in React JS. I also have a solid grip of the fundamentals of web development using HTML, CSS, and JavaScript.</p>
             </div>
           </div>
 
@@ -102,11 +102,14 @@ function App() {
           <p className="section_subtitle section_subtitle_about">Front-End Developer from Budapest</p>
 
           <div className="about_me_body">
-            <p>I'm a web developer and designer based out of Budapest, Hungary. I love building apps that solve real-world problems, and that are delightful to use. My specialities include Javascript, React JS, Tailwind CSS, and Styled Components.</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+            <p>I'm a web developer and designer based out of Budapest, Hungary. 
+              I create websites that are not only visually stunning but also user-friendly, 
+              fast-loading, and optimized for search engines. 
+              I use the latest technology and design trends to create websites that stand out from the crowd and engage your audience.</p>
+            {/* <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p> */}
           </div>
 
-          <img src={portfolio_second_picture} alt="Jane leaning against a bus" className="about_me_img" />
+          <img src={portfolio_picture} alt="Jane leaning against a bus" className="about_me_img" />
         </section>
 
         <section ref={myProjects} className='my_projects_section'>

@@ -140,7 +140,7 @@ a {
   display: none;
 }
 
-/* Nav menu animation: */
+/* Email and Nav menu animation: */
 
 .nav_link {
   font-size: larger;
@@ -162,6 +162,29 @@ a {
 }
 
 .nav_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.marcus_email {
+  position: relative;
+
+}
+
+.marcus_email::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.marcus_email:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -365,7 +388,7 @@ a {
 .portfolio_item {
   background: var(--color-accent);
   overflow: hidden;
-  
+
 
 }
 
@@ -375,7 +398,7 @@ a {
     opacity 250ms linear;
   object-fit: cover;
   height: 100%;
-  
+
 }
 
 .portfolio_item:focus {
@@ -395,20 +418,20 @@ a {
     -ms-transition-property: none !important;
     -webkit-transition-property: none !important;
     transition-property: none !important;
-    
-}
 
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  
-}
+  }
 
-.portfolio_img {
-  transform: none !important;
-  height: auto !important;
-  
-}
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .portfolio_img {
+    transform: none !important;
+    height: auto !important;
+
+  }
 
 }
 
@@ -511,6 +534,7 @@ a {
 
 .toggle .line1 {
   transform: rotate(-45deg) translate(-10px, 2px);
+  transition: .3s ease-in-out;
 }
 
 .toggle .line2 {
@@ -519,6 +543,7 @@ a {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-10px, -3px);
+  transition: .3s ease-in-out;
 }
 
 /* scroll to top button */
@@ -527,13 +552,12 @@ a {
   bottom: 5%;
   right: 0%;
   z-index: 3;
-  
+
 }
 
 .top_btn_styles {
   height: 70px;
   width: 50px;
   cursor: pointer;
-  
-}
 
+}

@@ -206,13 +206,12 @@ function App() {
 
           <div className="portfolio">
 
-            <a href="https://team2project-97c57.web.app/main" className="portfolio_item">
-              <img src={EventHorizon} alt="" className="portfolio_img" />
-            </a>
-
-
             <a href="https://edesm.com" className="portfolio_item">
               <img src={edesM} alt="" className="portfolio_img" />
+            </a>
+
+            <a href="https://team2project-97c57.web.app/main" className="portfolio_item">
+              <img src={EventHorizon} alt="" className="portfolio_img" />
             </a>
 
             <a href="https://catch-up-fd42f.web.app/" className="portfolio_item">

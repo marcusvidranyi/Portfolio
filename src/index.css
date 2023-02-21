@@ -322,8 +322,9 @@ a {
 /* My services section*/
 
 .section_title_services {
-  padding-top: 10px;
+  padding-top: 30px;
 }
+
 .my_services {
   background-color: var(--color-dark);
   background-image: url(./img/portfolio_services_background.jpg);

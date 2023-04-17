@@ -25,6 +25,10 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   background: var(--color-light);
   color: var(--color-dark);
@@ -113,15 +117,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 6vh;
-  background: #3F83F8;
+  height: auto;
 
 }
 
 .nav_menu {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   gap: 3rem;
   transition: 0.4s ease-in;
 
@@ -133,7 +135,7 @@ a {
   height: 0.2rem;
   margin: 0.4rem;
   background: #fff;
-  
+
 }
 
 .nav_toggler {
@@ -141,13 +143,103 @@ a {
   display: none;
 }
 
+nav a {
+  color: white;
+  text-shadow: 0 0 5px black;
+
+}
+
+/*------------------------------PARALLAX-------------------------------------------*/
+
+
+.wrapper {
+  padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  background-color: #303030;
+
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+  z-index: -1;
+
+}
+
+.background,
+.foreground,
+.second_foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+}
+
+.background {
+  transform: translateZ(-20px) scale(4);
+  height: 100%;
+  object-position: bottom;
+
+}
+
+.foreground {
+  transform: translateZ(-5px) scale(1.5);
+  height: 300px;
+  width: auto;
+  top: 100px;
+  right: 50%;
+
+}
+
+.second_foreground {
+  transform: translateZ(5px) scale(1);
+  height: 35vh;
+  width: auto;
+  bottom: 10vh;
+  left: 50%;
+}
+
+.parallax_title {
+  font-size: 7rem;
+  color: white;
+  text-shadow: 0 0 5px black;
+  margin-top: 40vh;
+  text-align: center;
+
+}
+
+.parallax_text {
+  font-size: 2rem;
+  padding: 2rem;
+  /* background-color: #ffff; */
+  color: black;
+}
+
+.intro {
+
+  /* background-color: #ffff; */
+
+}
+
+
+
 /* Email and Nav menu animation: */
 
 .nav_link {
   font-size: larger;
   display: inline-block;
   position: relative;
-  
+
 }
 
 .nav_link::after {
@@ -196,10 +288,15 @@ a {
 .section_title {
   margin-bottom: .25em;
   align-self: center;
+  color: #ffff;
+  text-shadow: 0 0 5px black;
+
+
 }
 
 .section_title_intro {
   font-weight: var(--fw-reg);
+
 }
 
 .section_title_intro strong {
@@ -235,7 +332,10 @@ a {
 
 .intro {
   padding-top: 20px;
+  /* margin-bottom: 500px; */
   position: relative;
+  /* height: 100vh; */
+
 }
 
 .intro_img {
@@ -251,7 +351,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 0 5vh 0;
+  padding: 5vh 0 5vh 0;
+  background-color: #ffff;
 }
 
 .tech_stack h3 {
@@ -283,7 +384,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 
@@ -299,6 +400,8 @@ a {
       "img title"
       "img subtitle";
     grid-template-columns: min-content max-content;
+    /* background-color: #ffff; */
+
   }
 
   .intro_img {
@@ -326,11 +429,13 @@ a {
 }
 
 .my_services {
-  background-color: var(--color-dark);
-  background-image: url(./img/portfolio_services_background.jpg);
+  /* background-color: var(--color-dark);
+  background-image: url(./img/portfolio_services_background.jpg); */
+  
   background-size: cover;
   background-blend-mode: normal;
   color: var(--color-light);
+  text-shadow: 0 0 5px black;
   text-align: center;
 }
 
@@ -383,6 +488,9 @@ a {
 .about_me {
   max-width: 1000px;
   margin: 0 auto;
+  color: #ffff;
+  text-shadow: 0 0 5px black;
+
 }
 
 .about_me_img {
@@ -488,11 +596,11 @@ a {
 }
 
 .about_me_section {
-  background-color: #15bd7a;
+  
 }
 
 .my_projects_section {
-  background-color: #303030;
+  
 
 }
 
@@ -581,7 +689,7 @@ a {
   font-size: larger;
   padding-bottom: 70%;
   transition: transform 0.3s ease-in-out;
-  
+
 }
 
 /* Toggler Icon Animation */
@@ -594,7 +702,7 @@ a {
 .toggle .line2 {
   opacity: 0;
   transition: transform 0.3s ease-in-out;
-  
+
 }
 
 .toggle .line3 {

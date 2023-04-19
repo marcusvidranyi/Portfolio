@@ -1,5 +1,5 @@
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import ScrollToTop from './components/ScrollToTop';
 import finalmyphoto from "./img/finalmyphoto.png";
 import portfolio_picture from "./img/profilepicture01.jpeg";
@@ -27,6 +27,12 @@ import bootstrap from "./img/tech_stack_img/bootstrap.png";
 import without_balloon from "./img/without_balloon.jpg";
 import balloon_only from "./img/balloon_only.png";
 import second_balloon from "./img/second_balloon.png";
+import mountain_range from "./img/mountain_range.jpg";
+import alien_sky from "./img/alien_sky.jpg";
+import third_balloon from "./img/third_balloon.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 /* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faCss3Alt, faJs, faReact, faGitAlt, faGithub, }  from "@fortawesome/free-brands-svg-icons"; */
@@ -36,18 +42,33 @@ import { faHtml5, faCss3Alt, faJs, faReact, faGitAlt, faGithub, }  from "@fortaw
 
 function App() {
 
+
+  const handleScrollToTop = () => {
+    if (wrapperRef.current) {
+      wrapperRef.current.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+
+
   const home = useRef(null);
   const services = useRef(null);
   const aboutMe = useRef(null);
   const myProjects = useRef(null);
+  const wrapperRef = useRef(null);
 
-  const scrollToSection = (ref) => {
-    window.scrollTo({
-      top: ref.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
+  const scrollToRef = (ref) => {
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+      speed: 'slow'
     });
   };
+
 
   const [active, setActive] = useState("nav_menu");
   const [toggleIcon, setToggleIcon] = useState("nav_toggler");
@@ -62,25 +83,29 @@ function App() {
     toggleIcon === "nav_toggler" ? setToggleIcon("nav_toggler toggle") : setToggleIcon("nav_toggler");
   };
 
+  
+
+
+
   return (
     <div className="App">
       <main>
-        <section className="wrapper">
-          <ScrollToTop />
+        <ScrollToTop />
+        <section className="wrapper" id="wrapper" ref={wrapperRef} >
           <header>
             <nav className="nav">
               <a href="mailto:marcusvidranyi@gmail.com" className="marcus_email">marcusvidranyi@gmail.com</a>
               <ul className={active}>
-                <li onClick={() => scrollToSection(home)} className="nav_item">
+                <li onClick={() => scrollToRef(home)} className="nav_item">
                   <a href="#home" className="nav_link">Home</a>
                 </li>
-                <li onClick={() => scrollToSection(services)} className="nav_item">
+                <li onClick={() => scrollToRef(services)} className="nav_item">
                   <a href="#services" className="nav_link">My Services</a>
                 </li>
-                <li onClick={() => scrollToSection(aboutMe)} className="nav_item">
+                <li onClick={() => scrollToRef(aboutMe)} className="nav_item">
                   <a href="#aboutme" className="nav_link">About me</a>
                 </li>
-                <li onClick={() => scrollToSection(myProjects)} className="nav_item">
+                <li onClick={() => scrollToRef(myProjects)} className="nav_item">
                   <a href="#myprojects" className="nav_link">My Projects</a>
                 </li>
               </ul>
@@ -90,9 +115,10 @@ function App() {
                 <div className="line3"></div>
               </div>
             </nav>
-            <img src={without_balloon} className="background" />
+            <img src={alien_sky} className="background" />
             <img src={balloon_only} className="foreground" />
             <img src={second_balloon} className="second_foreground" />
+            <img src={third_balloon} className="third_foreground" />
             <h1 className="parallax_title">WELCOME</h1>
           </header>
           <section className="parallax_text">
@@ -109,11 +135,11 @@ function App() {
           {/* <section ref={home} className='intro'>
             <h1 className="section_title section_title_intro" >
               I am <strong>Marcus Vidrányi</strong>
-            </h1>
-            <p className="section_subtitle section_subtitle_intro">Front-End Developer</p>
-            <img src={finalmyphoto} alt="my picture" className="intro_img"></img>
-          </section> */}
-          <section className="tech_stack">
+              </h1>
+              <p className="section_subtitle section_subtitle_intro">Front-End Developer</p>
+              <img src={finalmyphoto} alt="my picture" className="intro_img"></img>
+            </section> */}
+          <div className="tech_stack" id="tech_stack">
             <h3>Tech stack and skills</h3>
             <div className="tech_logo_img_box">
               <div className="tech_logo_img_container">
@@ -182,7 +208,7 @@ function App() {
               </div>
             </div>
 
-          </section>
+          </div>
 
           {/* Services */}
 
@@ -199,7 +225,7 @@ function App() {
               </div>
             </div>
 
-            <div className="btn" onClick={() => scrollToSection(myProjects)}>My Projects</div>
+            <div className="btn" onClick={() => scrollToRef(myProjects)}>My Projects</div>
           </div>
 
 
@@ -222,7 +248,7 @@ function App() {
 
           <section ref={myProjects} className='my_projects_section'>
             <h2 className="section_title section_title_work">My Projects</h2>
-            <p className="section_subtitle section_subtitle_work">A selection of my range of work</p>
+            {/* <p className="section_subtitle section_subtitle_work">A selection of my range of work</p> */}
 
             <div className="portfolio">
 
@@ -241,6 +267,9 @@ function App() {
 
             </div>
           </section>
+          <div className="scroll_to_top_button_box">
+            <button onClick={handleScrollToTop} className="scroll_to_top_button">Scroll to Top</button>
+          </div>
           <footer className="footer">
 
             <a href="mailto:marcusvidranyi@gmail.com" className="footer__link">marcusvidranyi@gmail.com</a>

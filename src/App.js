@@ -18,11 +18,11 @@ import react from "./img/tech_stack_img/react.png";
 import responsive from "./img/tech_stack_img/responsive.png";
 import restful from "./img/tech_stack_img/restful.png";
 import sass from "./img/tech_stack_img/sass.png";
-import vscode from "./img/tech_stack_img/vscode.jpg";
-import w3c from "./img/tech_stack_img/w3c.jpg";
+import vscode from "./img/tech_stack_img/vscode.png";
+import w3c from "./img/tech_stack_img/w3c.png";
 import wordpress from "./img/tech_stack_img/wordpress.png";
 import css3 from "./img/tech_stack_img/css3.png";
-import scrum from "./img/tech_stack_img/scrum.jpg";
+import scrum from "./img/tech_stack_img/scrum.png";
 import bootstrap from "./img/tech_stack_img/bootstrap.png";
 import without_balloon from "./img/without_balloon.jpg";
 import balloon_only from "./img/balloon_only.png";
@@ -30,6 +30,7 @@ import second_balloon from "./img/second_balloon.png";
 import mountain_range from "./img/mountain_range.jpg";
 import alien_sky from "./img/alien_sky.jpg";
 import third_balloon from "./img/third_balloon.png";
+import balloon_4 from "./img/balloon_4.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -42,7 +43,7 @@ import { faHtml5, faCss3Alt, faJs, faReact, faGitAlt, faGithub, }  from "@fortaw
 
 function App() {
 
-
+/*---------------------------New scroll to top function after adding Parallax---------------------------- */
   const handleScrollToTop = () => {
     if (wrapperRef.current) {
       wrapperRef.current.scrollTo({
@@ -51,7 +52,7 @@ function App() {
       });
     }
   };
-
+/*--------------------------------------------Page Navigation----------------------------------------- */
 
 
   const home = useRef(null);
@@ -69,6 +70,7 @@ function App() {
     });
   };
 
+  /* TogglerIcon */
 
   const [active, setActive] = useState("nav_menu");
   const [toggleIcon, setToggleIcon] = useState("nav_toggler");
@@ -78,12 +80,27 @@ function App() {
   const navToggle = () => {
     active === "nav_menu" ? setActive("nav_menu nav_active") : setActive("nav_menu");
 
-    /* TogglerIcon */
 
     toggleIcon === "nav_toggler" ? setToggleIcon("nav_toggler toggle") : setToggleIcon("nav_toggler");
   };
 
-  
+
+  /*--------------------------------------Plane animation on scroll-------------------------------------------- */
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+        else {
+          entry.target.classList.remove("show");
+        }
+      })
+    })
+    const hiddenElements = document.querySelectorAll(".tech_stack");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
 
 
 
@@ -119,6 +136,7 @@ function App() {
             <img src={balloon_only} className="foreground" />
             <img src={second_balloon} className="second_foreground" />
             <img src={third_balloon} className="third_foreground" />
+            <img src={balloon_4} className="fourth_foreground" />
             <h1 className="parallax_title">WELCOME</h1>
           </header>
           <section className="parallax_text">
@@ -139,7 +157,7 @@ function App() {
               <p className="section_subtitle section_subtitle_intro">Front-End Developer</p>
               <img src={finalmyphoto} alt="my picture" className="intro_img"></img>
             </section> */}
-          <div className="tech_stack" id="tech_stack">
+          <div className="tech_stack hidden" id="tech_stack">
             <h3>Tech stack and skills</h3>
             <div className="tech_logo_img_box">
               <div className="tech_logo_img_container">

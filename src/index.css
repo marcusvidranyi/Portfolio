@@ -204,26 +204,13 @@ header {
 
 }
 
-/*----------This prevents the wrapper overflowing on bigger screens!-----*/
 
-@media (min-height: 1100px) {
-  .background {
-    transform: translateZ(-10px) scale(2.3);
-    height: 250%;
-    object-fit: cover;
-    /* object-position: top 500px; */
-    /* object-position: bottom; */
-
-  }
-}
-
-/*--------------------------------------------------------------------------*/
 .foreground {
   transform: translateZ(-5px) scale(1.5);
   height: 25vh;
   width: auto;
   top: 100px;
-  right: 40vw;
+  right: 20vw;
 
 }
 
@@ -232,25 +219,26 @@ header {
   height: 55vh;
   width: auto;
   bottom: 0vh;
-  left: 50%;
+  left: 35%;
 
 }
 
 .third_foreground {
 
-  transform: translateZ(-5px) scale(1.5) scaleX(-1);
+  transform: translateZ(5px) scale(0.5) scaleX(-1);
   height: 35vh;
   width: auto;
-  bottom: -200vh;
-  right: 10%;
+  bottom: -290vh;
+  right: 60%;
 }
 
 .fourth_foreground {
-  transform: translateZ(0px) scale(0.5);
+  transform: translateZ(5px) scale(1);
   height: 40vh;
   width: auto;
-  bottom: 30vh;
-  left: 10%;
+  bottom: -200vh;
+  left: 60%;
+
 
 }
 
@@ -268,6 +256,37 @@ header {
   padding: 2rem;
   color: black;
 }
+
+/*----------This prevents the wrapper from overflowing on bigger screens!-----*/
+
+@media (min-height: 1100px) {
+  .background {
+    transform: translateZ(-10px) scale(2.3);
+    height: 250%;
+    object-fit: cover;
+    /* object-position: top 500px; */
+    /* object-position: bottom; */
+
+  }
+
+  
+  .third_foreground {
+    
+    transform: translateZ(5px) scale(0.5) scaleX(-1);
+    height: 35vh;
+    width: auto;
+    bottom: -260vh;
+    right: 60%;
+  }
+
+  .fourth_foreground {
+    bottom: -180vh;
+    left: 59%;
+  }
+  
+}
+
+/*--------------------------------------------------------------------------*/
 
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -332,6 +351,10 @@ header {
 
 }
 
+.section_title_work {
+  margin-bottom: 15vh;
+}
+
 .section_title_intro {
   font-weight: var(--fw-reg);
 
@@ -366,6 +389,7 @@ header {
   /* margin-bottom: 500px; */
   position: relative;
   /* height: 100vh; */
+  z-index: -1;
 
 }
 
@@ -699,6 +723,7 @@ header {
 .portfolio_item {
   background: var(--color-accent);
   overflow: hidden;
+  
 
 
 }

@@ -31,6 +31,7 @@ import mountain_range from "./img/mountain_range.jpg";
 import alien_sky from "./img/alien_sky.jpg";
 import third_balloon from "./img/third_balloon.png";
 import balloon_4 from "./img/balloon_4.png";
+import balloon_house from "./img/balloon_house.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -43,7 +44,7 @@ import { faHtml5, faCss3Alt, faJs, faReact, faGitAlt, faGithub, }  from "@fortaw
 
 function App() {
 
-/*---------------------------New scroll to top function after adding Parallax---------------------------- */
+  /*---------------------------New scroll to top function after adding Parallax---------------------------- */
   const handleScrollToTop = () => {
     if (wrapperRef.current) {
       wrapperRef.current.scrollTo({
@@ -52,7 +53,7 @@ function App() {
       });
     }
   };
-/*--------------------------------------------Page Navigation----------------------------------------- */
+  /*--------------------------------------------Page Navigation----------------------------------------- */
 
 
   const home = useRef(null);
@@ -136,27 +137,19 @@ function App() {
             <img src={balloon_only} className="foreground" />
             <img src={second_balloon} className="second_foreground" />
             <img src={third_balloon} className="third_foreground" />
-            <img src={balloon_4} className="fourth_foreground" />
             <h1 className="parallax_title">WELCOME</h1>
           </header>
-          <section className="parallax_text">
-            <section ref={home} className='intro'>
-              <h1 className="section_title section_title_intro" >
-                I am <strong>Marcus Vidrányi</strong>
-              </h1>
-              <p className="section_subtitle section_subtitle_intro">Front-End Developer</p>
-              <img src={finalmyphoto} alt="my picture" className="intro_img"></img>
-            </section>
-          </section>
 
-          {/* Intro */}
-          {/* <section ref={home} className='intro'>
-            <h1 className="section_title section_title_intro" >
-              I am <strong>Marcus Vidrányi</strong>
+          <section className="parallax_text">
+            <div ref={home} className='intro'>
+              <h1 className="section_title section_title_intro" >
+                I am <strong><span style={{color: "#FEB600"}}>Marcus</span> Vidrányi</strong>
               </h1>
               <p className="section_subtitle section_subtitle_intro">Front-End Developer</p>
               <img src={finalmyphoto} alt="my picture" className="intro_img"></img>
-            </section> */}
+            </div>
+          </section>
+          <img src={balloon_house} className="fourth_foreground" />
           <div className="tech_stack hidden" id="tech_stack">
             <h3>Tech stack and skills</h3>
             <div className="tech_logo_img_box">

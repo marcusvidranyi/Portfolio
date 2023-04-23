@@ -11,13 +11,15 @@ import alien_sky from "./img/alien_sky.jpg";
 import third_balloon from "./img/third_balloon.png";
 import balloon_4 from "./img/balloon_4.png";
 import balloon_house from "./img/balloon_house.png";
+import cloud1 from "./img/cloud_animation/cloud1.png";
+import cloud2 from "./img/cloud_animation/cloud2.png";
+import cloud3 from "./img/cloud_animation/cloud3.png";
+import cloud4 from "./img/cloud_animation/cloud4.png";
+import cloud5 from "./img/cloud_animation/cloud5.png";
 
-/* import AOS from "aos";
-import "aos/dist/aos.css"; */
+
 import { FaAngleDoubleUp } from "react-icons/fa";
 import scrollToTopImg from "./img/scrolltotop.png";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 import Projects from "./components/Projects";
 import Services from "./components/Services";
@@ -112,6 +114,26 @@ function App() {
     hiddenElements.forEach((el) => observer.observe(el));
   }, []);
 
+  /*----------------------------------------FADE UP ANIMATIONS----------------------------------------------- */
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show_up");
+        }
+        else {
+          entry.target.classList.remove("show_up");
+        }
+      })
+    })
+    const hiddenElements = document.querySelectorAll(".intro_section, .section_services, .btn_box, .section_aboutMe, .portfolio");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+
+
+
+
 
 
   return (
@@ -123,7 +145,7 @@ function App() {
             <nav className="nav">
               <a href="mailto:marcusvidranyi@gmail.com" className="marcus_email">marcusvidranyi@gmail.com</a>
               <ul className={active}>
-                <li onClick={() => scrollToRef(home)} className="nav_item">
+                <li onClick={() => scrollToRef(wrapperRef)} className="nav_item">
                   <a href="#home" className="nav_link">Home</a>
                 </li>
                 <li onClick={() => scrollToRef(services)} className="nav_item">
@@ -149,7 +171,7 @@ function App() {
             <h1 className="parallax_title">WELCOME</h1>
           </header>
 
-          <section className="parallax_text">
+          <section className="intro_section hidden_up">
             <div ref={home} className='intro'>
               <h1 className="section_title section_title_intro" >
                 I am <strong><span style={{ color: "#FEB600" }}>Marcus</span> Vidrányi</strong>
@@ -164,26 +186,29 @@ function App() {
           </section>
 
           {/* Services */}
-          <section ref={services} style={{ padding: "0" }}>
+          <div ref={services}></div>
+          <section style={{ padding: "0" }} className="section_services hidden_up">
             <Services />
           </section>
-          <div className="btn_box">
+          <div className="btn_box hidden_up">
             <div className="btn" onClick={() => scrollToRef(myProjects)}>My Projects</div>
           </div>
-          <section ref={aboutMe} style={{ padding: "0 0 5vh 0" }}>
+          <div ref={aboutMe}></div>
+          <section style={{ padding: "0 0 5vh 0" }} className="section_aboutMe hidden_up">
             <AboutMe />
           </section>
 
           <section ref={myProjects} className='my_projects_section'>
-            <h2 className="section_title section_title_work">My Projects</h2>
+            <h2 className="section_title section_title_work" style={{ zIndex: "-1" }}>My Projects</h2>
             {/* <p className="section_subtitle section_subtitle_work">A selection of my range of work</p> */}
 
             <Projects />
 
           </section>
-          
+
           <footer className="footer">
 
+            <p>Thank you for visiting my website! Please contact me  at </p>
             <a href="mailto:marcusvidranyi@gmail.com" className="footer__link">marcusvidranyi@gmail.com</a>
             <ul className="social-list">
               <li className="social-list__item">
@@ -194,8 +219,6 @@ function App() {
             </ul>
           </footer>
         </section>
-
-
       </main>
 
     </div>

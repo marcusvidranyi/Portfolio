@@ -1,9 +1,12 @@
 import "../index.css";
-import { useState, useRef, useEffect } from "react";
+
+
 
 
 
 const Services = () => {
+    
+    
 
     return (
         <div>
@@ -28,7 +31,7 @@ const Services = () => {
 
 
 
-            
+
         </div>
     )
 }

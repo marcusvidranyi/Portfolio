@@ -1,8 +1,6 @@
 import "../index.css";
 import portfolio_picture from "../img/profilepicture01.jpeg";
 
-import { useState, useRef, useEffect } from "react";
-
 const AboutMe = () => {
     return (
         <div className='about_me'>

@@ -11,7 +11,7 @@ import { faFacebook, faFacebookMessenger, faCss3, faHtml5, faReact } from "@fort
 
 const Projects = () => {
     return (
-        <div className="portfolio">
+        <div className="portfolio hidden_up">
             <div className="portfolio_item">
                 <img src={portfolio_screenshot} alt="Portfolio website" className="portfolio_img" />
                 <div className="portfolio_info">

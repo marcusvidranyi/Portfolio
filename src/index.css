@@ -450,6 +450,8 @@ header {
   transform: translateY(0);
 }
 
+
+
 /*----------------------------------------------------------------------------------------------------*/
 
 
@@ -494,7 +496,7 @@ header {
 .service {
   max-width: 400px;
   margin: 0 auto 2em;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(50px);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   border: solid 2px rgba(255, 255, 255, 0.027);
   color: white;
@@ -609,6 +611,10 @@ header {
   z-index: 2;
 }
 
+.portfolio_info p {
+  /* padding: 0 10px 0 10px; */
+}
+
 .my_projects_section>.section_title {
   text-align: center;
   color: #fff;
@@ -620,6 +626,16 @@ header {
   justify-content: center;
   align-items: center;
 
+
+}
+
+.project_button_box {
+  /* padding: 0px 0 15px 0; */
+  padding: 15px;
+}
+
+.project_button_box button a:hover {
+  color: #FEB600;
 }
 
 .project_icons_box div {
@@ -709,8 +725,6 @@ header {
   display: flex;
   align-items: center;
   margin-left: 5px
-  
-
 }
 
 .footer__link {
@@ -911,7 +925,6 @@ header {
 
 @media screen and (max-width: 768px) {
 
-
   .nav {
     margin-top: 20px;
   }
@@ -945,6 +958,7 @@ header {
   .nav_item {
     margin-bottom: 30px;
   }
+
 
   .portfolio {
     display: flex;
@@ -1029,6 +1043,34 @@ header {
     flex-direction: column;
     align-items: center;
     font-size: 14px;
+  }
+
+  .services {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10vh 2.5vh 10vh 2.5vh;
+    height: 75vh;
+  }
+
+  .service {
+    width: 100%;
+    margin: 0 20px 0 20px;
+    margin: 30px 0 30px 0;
+
+  }
+
+  .section_services,
+  .btn_box,
+  .intro_section,
+  .section_aboutMe {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+
   }
 
 

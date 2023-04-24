@@ -17,6 +17,7 @@ const Projects = () => {
                 <div className="portfolio_info">
                     <h3>My portfolio</h3>
                     <p>This portfolio</p>
+                    <br></br>
                     <div className="icons_and_buttons">
                         <div className="project_icons_box">
                             <div>
@@ -100,6 +101,7 @@ const Projects = () => {
                 <div className="portfolio_info">
                     <h3>Catch-Up</h3>
                     <p>Basic Chat App</p>
+                    <br></br>
                     <div className="icons_and_buttons">
                         <div className="project_icons_box">
                             <div>

@@ -4,6 +4,7 @@ import portfolio_screenshot from "../img/portfolio_screenshot.jpg";
 import edesM from "../img/edesM.jpg";
 import EventHorizon from "../img/EventHorizon.jpg";
 import CatchUp from "../img/CatchUp.jpg";
+import tbkiskola_screenshot from "../img/tbkiskola_screenshot.jpg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUp, faLocationDot, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +13,33 @@ import { faFacebook, faFacebookMessenger, faCss3, faHtml5, faReact } from "@fort
 const Projects = () => {
     return (
         <div className="portfolio hidden_up">
+            <div className="portfolio_item">
+                <img src={tbkiskola_screenshot} alt="Portfolio website" className="portfolio_img" />
+                <div className="portfolio_info">
+                    <h3>Törökbálinti Kutyaiskola</h3>
+                    <p>Client Website, still under construction</p><span>To view the code, please contact me.</span>
+                    <div className="icons_and_buttons">
+                        <div className="project_icons_box">
+                            <div>
+                                <span>ReactJS</span>
+                                <FontAwesomeIcon icon={faReact} />
+                            </div>
+                            <div>
+                                <span>HTML</span>
+                                <FontAwesomeIcon icon={faHtml5} />
+                            </div>
+                            <div>
+                                <span>CSS</span>
+                                <FontAwesomeIcon icon={faCss3} />
+                            </div>
+                        </div>
+                        <div className="project_button_box">
+                            <button>VIEW CODE</button>
+                            <button><a href="https://tbkiskola.web.app/">VISIT PAGE</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="portfolio_item">
                 <img src={portfolio_screenshot} alt="Portfolio website" className="portfolio_img" />
                 <div className="portfolio_info">

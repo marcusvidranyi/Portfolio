@@ -9,11 +9,7 @@ import alien_sky from "./img/alien_sky.jpg";
 import third_balloon from "./img/third_balloon.png";
 import balloon_4 from "./img/balloon_4.png";
 import balloon_house from "./img/balloon_house.png";
-import cloud1 from "./img/cloud_animation/cloud1.png";
-import cloud2 from "./img/cloud_animation/cloud2.png";
-import cloud3 from "./img/cloud_animation/cloud3.png";
-import cloud4 from "./img/cloud_animation/cloud4.png";
-import cloud5 from "./img/cloud_animation/cloud5.png";
+
 
 
 import { FaAngleDoubleUp } from "react-icons/fa";
@@ -23,10 +19,6 @@ import Projects from "./components/Projects";
 import Services from "./components/Services";
 import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";
-
-
-
-
 
 
 function App() {
@@ -125,7 +117,7 @@ function App() {
         }
       })
     })
-    const hiddenElements = document.querySelectorAll(".intro_section, .section_services, .btn_box, .section_aboutMe, .portfolio");
+    const hiddenElements = document.querySelectorAll(".intro_section, .section_services, .section_aboutMe, .portfolio");
     hiddenElements.forEach((el) => observer.observe(el));
   }, []);
 
@@ -139,6 +131,9 @@ function App() {
       <main>
         {showScrollTopButton && <img src={scrollToTopImg} className="top_btn_position top_btn_styles" onClick={handleScrollToTop} />}
         <section className="wrapper" id="wrapper" ref={wrapperRef} >
+          <section className="scroll_down_animation">
+            <div className="scroll_btn"></div>
+          </section>
           <header>
             <nav className="nav">
               <a href="mailto:marcusvidranyi@gmail.com" className="marcus_email">marcusvidranyi@gmail.com</a>
@@ -188,9 +183,6 @@ function App() {
           <section style={{ padding: "0" }} className="section_services hidden_up">
             <Services />
           </section>
-          <div className="btn_box hidden_up">
-            <div className="btn" onClick={() => scrollToRef(myProjects)}>My Projects</div>
-          </div>
           <div ref={aboutMe}></div>
           <section style={{ padding: "0 0 5vh 0" }} className="section_aboutMe hidden_up">
             <AboutMe />
@@ -198,7 +190,6 @@ function App() {
 
           <section ref={myProjects} className='my_projects_section'>
             <h2 className="section_title section_title_work" style={{ zIndex: "1" }}>My Projects</h2>
-            {/* <p className="section_subtitle section_subtitle_work">A selection of my range of work</p> */}
 
             <Projects />
 

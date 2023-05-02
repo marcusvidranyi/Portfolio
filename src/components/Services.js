@@ -5,8 +5,8 @@ import "../index.css";
 
 
 const Services = () => {
-    
-    
+
+
 
     return (
         <div>
@@ -16,7 +16,7 @@ const Services = () => {
                     <div className="services">
                         <div className="service">
                             <h3>Design</h3>
-                            <p>I strive to create beautiful and intuitive web apps, meaning I design with both aesthetics and usability in mind. I can bring your vision to life with a custom website that perfectly fits your needs.</p>
+                            <p>My objective is to develop elegant and user-friendly web applications, which means I think about both how they look and how they work. If you've got a vision for a website, I can help you make it happen with a custom design that's exactly what you need.</p>
                         </div>
                         <div className="service">
                             <h3>Development</h3>

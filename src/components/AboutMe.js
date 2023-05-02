@@ -5,8 +5,6 @@ const AboutMe = () => {
     return (
         <div className='about_me'>
             <h2 className="section_title section_title_about">Who I am</h2>
-            <p className="section_subtitle section_subtitle_about">Front-End Developer from Budapest</p>
-
             <div className="about_me_body">
                 <p>I'm a web developer and designer based in Budapest, Hungary.
                     I create websites that are not only visually stunning but also user-friendly,

@@ -176,7 +176,7 @@ function App() {
             </div>
           </section>
           <img src={balloon_house} className="fourth_foreground" />
-          <section className="tech_stack_section">
+          <section>
             <TechStack />
           </section>
 
@@ -192,6 +192,7 @@ function App() {
 
           <section ref={myProjects} className='my_projects_section'>
             <h2 className="section_title section_title_work" style={{ zIndex: "1" }}>My Projects</h2>
+            {/* <p className="section_subtitle section_subtitle_work">A selection of my range of work</p> */}
 
             <Projects />
 

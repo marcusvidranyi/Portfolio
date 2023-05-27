@@ -72,7 +72,7 @@ const Projects = () => {
                 <img src={edesM} alt="edesm pastry shop website" className="portfolio_img" />
                 <div className="portfolio_info">
                     <h3>ÉdesM</h3>
-                    <p>Client Website for a pastry shop</p><span>To view the code, please contact me.</span>
+                    <p>Client Website for a pastry shop</p><span>Please contact me to view code</span>
                     <div className="icons_and_buttons">
                         <div className="project_icons_box">
                             <div>

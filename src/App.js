@@ -3,8 +3,10 @@ import { useState, useRef, useEffect } from "react";
 
 import finalmyphoto from "./img/finalmyphoto.png";
 import gitHub from "./img/github_icon_2.png";
+import without_balloon from "./img/without_balloon.jpg";
 import balloon_only from "./img/balloon_only.png";
 import second_balloon from "./img/second_balloon.png";
+import mountain_range from "./img/mountain_range.jpg";
 import alien_sky from "./img/alien_sky.jpg";
 import third_balloon from "./img/third_balloon.png";
 import balloon_4 from "./img/balloon_4.png";

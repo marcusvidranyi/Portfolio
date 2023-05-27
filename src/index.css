@@ -455,6 +455,31 @@ header {
 
 }
 
+/*-----------------------------------------AIRPLANE ANIMATION---------------------------------*/
+
+.hidden {
+  transform: translateX(-100%);
+  transition: 5s;
+}
+
+.show {
+  transform: translateX(0)
+}
+
+/*----------------------------------------FADE UP ANIMATIONS------------------------------------------*/
+
+.hidden_up {
+  transform: translateY(50%);
+  transition: 1s;
+}
+
+.show_up {
+  transform: translateY(0);
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
 
 
 
@@ -542,35 +567,7 @@ header {
   box-shadow: var(--bs);
 }
 
-@media (min-width: 780px) {
-
-  /*-----------------------------------------AIRPLANE ANIMATION---------------------------------*/
-
-  .hidden {
-    transform: translateX(-100%);
-    transition: 5s;
-  }
-
-  .show {
-    transform: translateX(0)
-  }
-
-  /*----------------------------------------FADE UP ANIMATIONS------------------------------------------*/
-
-  .hidden_up {
-    transform: translateY(50%);
-    transition: 1s;
-  }
-
-  .show_up {
-    transform: translateY(0);
-  }
-
-
-}
-
-/*----------------------------------------------------------------------------------------------------*/
-
+@media (min-width: 780px) {}
 
 /* My Work*/
 

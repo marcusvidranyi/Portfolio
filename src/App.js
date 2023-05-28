@@ -159,14 +159,14 @@ function App() {
           <div className="services">
             <div className="service">
               <h3>Design</h3>
-              <p>My objective is to develop elegant and user-friendly web applications, which means I think about both how they look and how they work. If you've got a vision for a website, I can help you make it happen with a custom design that's exactly what you need.</p>
+              <p>My objective is to develop elegant and user-friendly web applications, which means I think about both how they look and how they work. If you've got a vision for a website, I can help you make it happen with a custom design that's exactly what you need</p>
             </div>
             <div className="service">
               <h3>Development</h3>
               <p>Detail-oriented, and user-focused front-end
                 developer and designer, specializing in ReactJS.
                 Strong understanding of modern web development
-                principles, including HTML, CSS, and JavaScript.
+                principles, including HTML, CSS, and JavaScript
               </p>
             </div>
           </div>

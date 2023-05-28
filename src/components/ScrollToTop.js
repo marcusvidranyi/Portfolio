@@ -1,13 +1,12 @@
-/* import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaAngleDoubleUp } from "react-icons/fa";
 import scrollToTopImg from "../img/scrolltotop.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const ScrollToTop = (props) => {
+const ScrollToTop = () => {
 
     const [showScrollTopButton, setShowScrollTopButton] = useState(false);
-    
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -40,4 +39,4 @@ const ScrollToTop = (props) => {
         </div>
     );
 };
-export default ScrollToTop; */
+export default ScrollToTop;

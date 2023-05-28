@@ -87,7 +87,7 @@ function App() {
 
         {/* Intro */}
         <section ref={home} className='intro'>
-          <h1 className="section_title section_title_intro" >
+          <h1 className="section_title section_title_intro" style={{textShadow: "none"}}>
             Hi, I am <strong>Marcus Vidrányi</strong>
           </h1>
           <p className="section_subtitle section_subtitle_intro">Front-End Developer</p>

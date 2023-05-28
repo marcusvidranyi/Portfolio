@@ -25,6 +25,10 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
+main {
+  background-color: var(--color-dark);
+}
+
 body {
   background: var(--color-light);
   color: var(--color-dark);
@@ -196,6 +200,13 @@ a {
 .section_title {
   margin-bottom: .25em;
   align-self: center;
+  color: var(--color-light);
+  text-shadow: 5px 5px black;
+}
+
+.section_title strong{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 5px 5px black;
 }
 
 .section_title_intro {
@@ -252,6 +263,8 @@ a {
   justify-content: center;
   align-items: center;
   padding: 0 0 5vh 0;
+  color: var(--color-light);
+  text-shadow: 2px 2px black;
 }
 
 .tech_stack h3 {
@@ -337,11 +350,17 @@ a {
 
 .my_services p {
   padding: 0 10px 0 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section_title_services {
   color: var(--color-light);
   position: relative;
+}
+
+.about_me_body p {
+  color: var(--color-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section_title_services::after {
@@ -461,6 +480,14 @@ a {
   align-items: center;
   color: #ffff;
   text-shadow: 0 0 5px black;
+}
+
+.portfolio_info h3 {
+  text-shadow: 2px 2px black;
+}
+
+.portfolio_info p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .portfolio_info div button {
